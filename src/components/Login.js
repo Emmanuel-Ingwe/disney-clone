@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Login = (props) => {
-    <Container>
+    return <Container>
         <Content>Content</Content>
     </Container>;
 };
@@ -11,6 +11,9 @@ overflow: hidden;
 display: flex;
 ;`;
 
-const Content = styled.div``;
+const Content = styled.div`
+    
+`;
 
 export default Login;
+

@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Login = (props) => {
     return <Container>
-        <Content>Content</Content>
-        <div>
-            <h1>This is the home page</h1>
-            <Link to="about">Click to view our about page</Link>
-        </div>
+        <Content>
+            <Bgimage />
+        </Content>
     </Container>;
 
 };
@@ -29,7 +27,23 @@ const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 80px 40px;
+    height: 100%;
 `;
+
+const Bgimage = styled.div`
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/images/background.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1; 
+    `;
 
 export default Login;
 

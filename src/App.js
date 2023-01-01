@@ -6,9 +6,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
-        <Route path="" element={<Header />} />
         <Route path="/" element={<Login />} />
+        <Route path="/" element={<Header />} />
       </Routes>
 
     </div>

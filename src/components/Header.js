@@ -74,24 +74,34 @@ const NavMenu = styled.div`
             padding: 2px 0px;
             white-space: nowrap;
             position: relative;
-        }
-
-        &:before {
-            background-color: rgb(249, 249, 249);
-            border-radius: 0px 0px 4px 4px;
-            bottom: -6px;
-            content: "";
-            height: 2px;
-            opacity: 0;
-            position: absolute;
-            right: 0px;
-            transform-origin: ;
-            transform: scaleX(0);
-            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45) 0s;
-            visibility: hidden;
-            width: auto;
+            
+            &:before {
+              background-color: rgb(249, 249, 249);
+        border-radius: 0px 0px 4px 4px;
+        bottom: -6px;
+        content: "";
+        height: 2px;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        transform-origin: left center;
+        transform: scaleX(0);
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        visibility: hidden;
+        width: auto;
         }
     }
+
+    
+    &:hover { 
+      span:before {
+        transform: scaleX(1);
+        visibility: visible;
+        opacity: 1 !important;
+      }
+    }
+}
 
     /* @media (max-width: 768px) {
         display: none;

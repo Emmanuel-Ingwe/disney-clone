@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { app, analytics } from "../firebase";
+import { auth, provider } from "../firebase";
 
 const Header = (props) => {
 
     const handleApp = () => {
-        app
-            .signInWithPopup(analytics)
+        auth
+            .signInWithPopup(provider)
             .then((result) => {
                 console.log(result);
             })
@@ -147,6 +147,7 @@ const Login = styled.a`
   border: 1px solid #f9f9f9;
   border-radius: 4px;
   transition: all 0.2s ease 0s;
+  cursor:pointer;
   &:hover {
     background-color: #f9f9f9;
     color: #000;

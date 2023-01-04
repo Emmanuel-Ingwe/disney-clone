@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { auth, provider } from "../firebase";
-import { selectUserName, selectUserPhoto, setUserLoginDetails } from "../features/user/userSlice";
+import { selectUserName, selectUserPhoto, setUserLoginDetails, setSignOutState } from "../features/user/userSlice";
 
 
 const Header = (props) => {
@@ -22,14 +22,25 @@ const Header = (props) => {
     }, [userName]);
 
     const handleApp = () => {
-        auth
-            .signInWithPopup(provider)
-            .then((result) => {
-                setUser(result.user);
-            })
-            .catch((error) => {
-                alert(error.message);
-            });
+        if (!userName) {
+            auth
+                .signInWithPopup(provider)
+                .then((result) => {
+                    setUser(result.user);
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        }
+        else if (userName) {
+            auth
+                .signOut()
+                .then(() => {
+                    dispatch(setSignOutState());
+                    navigate.push("/");
+                })
+                .catch((err) => alert(err.message));
+        }
     };
 
     const setUser = (user) => {

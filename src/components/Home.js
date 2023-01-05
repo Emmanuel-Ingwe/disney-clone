@@ -4,7 +4,7 @@ import ImgSlider from "./ImgSlider";
 // import Originals from "./Originals";
 // import Recommends from "./Recommends";
 // import Trending from "./Trending";
-// import Viewers from "./Viewers";
+import Viewers from "./Viewers";
 // import { useEffect } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import db from "../firebase";
@@ -16,8 +16,8 @@ const Home = () => {
     return (
         <Container>
             <ImgSlider />
-            {/* <Viewers />
-            <Recommends />
+            <Viewers />
+            {/* <Recommends />
             <NewDisney />
             <Originals />
             <Trending /> */}

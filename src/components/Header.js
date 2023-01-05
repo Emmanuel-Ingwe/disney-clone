@@ -19,7 +19,7 @@ const Header = (props) => {
                 navigate.push("/home");
             }
         });
-    }, [userName]);
+    },);
 
     const handleApp = () => {
         if (!userName) {
@@ -235,7 +235,7 @@ const SignOut = styled.div`
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  
+
   ${UserImg} {
     border-radius: 50%;
     width: 100%;

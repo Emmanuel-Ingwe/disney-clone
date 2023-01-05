@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 
 const Home = () => {
-    return (
-        <div>Home</div>
-    );
+    return <Container>Home</Container>;
 };
+
+const Container = styled.main`
+    position: ;
+`;
 
 export default Home;

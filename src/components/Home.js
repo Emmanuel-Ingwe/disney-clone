@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
 // import NewDisney from "./NewDisney";
 // import Originals from "./Originals";
-// import Recommends from "./Recommends";
+import Recommend from "./Recommend";
 // import Trending from "./Trending";
 import Viewers from "./Viewers";
 // import { useEffect } from "react";
@@ -17,8 +17,8 @@ const Home = () => {
         <Container>
             <ImgSlider />
             <Viewers />
-            {/* <Recommends />
-            <NewDisney />
+            <Recommend />
+            {/* <NewDisney />
             <Originals />
             <Trending /> */}
         </Container>

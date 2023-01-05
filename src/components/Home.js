@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
-// import NewDisney from "./NewDisney";
+import NewDisney from "./NewDisney";
 // import Originals from "./Originals";
 import Recommend from "./Recommend";
 // import Trending from "./Trending";
@@ -18,8 +18,8 @@ const Home = () => {
             <ImgSlider />
             <Viewers />
             <Recommend />
-            {/* <NewDisney />
-            <Originals />
+            <NewDisney />
+            {/* <Originals />
             <Trending /> */}
         </Container>
     );

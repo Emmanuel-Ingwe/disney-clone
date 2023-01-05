@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
 import NewDisney from "./NewDisney";
-// import Originals from "./Originals";
+import Originals from "./Originals";
 import Recommend from "./Recommend";
-// import Trending from "./Trending";
+import Trending from "./Trending";
 import Viewers from "./Viewers";
 // import { useEffect } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import db from "../firebase";
-// import { setMovies } from "../features/movie/movieSlice";
+import { setMovies } from "../features/movie/movieSlice";
 // import { selectUserName } from "../features/user/userSlice";
 
 
@@ -19,8 +19,8 @@ const Home = () => {
             <Viewers />
             <Recommend />
             <NewDisney />
-            {/* <Originals />
-            <Trending /> */}
+            <Originals />
+            <Trending />
         </Container>
     );
 };
